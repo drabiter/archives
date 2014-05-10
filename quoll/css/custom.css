@@ -1,0 +1,40 @@
+@import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,400);
+
+html {
+	font-size: 18px;
+}
+
+body {
+	background-color: #fff;
+	color: rgb(104, 104, 104); 
+	width: 80%;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: auto;
+	font-weight: 100;
+	font-family: "Source Sans Pro", Helvetica, sans-serif;
+	font-size: 1rem;
+}
+
+h4 {
+	/*border-bottom: 1px solid rgb(229, 229, 229);*/
+}
+
+.pure-menu.pure-menu-open.sidebar {
+	border: none;
+}
+
+.content {
+	/*height: 100%;
+	padding-top: auto;*/
+}
+
+.inactive {
+	/*visibility: hidden;*/
+	display: none;
+}
+
+.active {
+	/*visibility: visible;*/
+	display: block;
+}

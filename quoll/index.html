@@ -1,0 +1,90 @@
+<!doctype html>
+
+<html>
+
+	<head>
+		<title>[Clinic Name]</title>
+		<meta charset="utf-8" />
+		<link rel="stylesheet" type="text/css" href="css/simplegrid.css" />
+		<link rel="stylesheet" href="http://yui.yahooapis.com/combo?pure/0.2.0/base-min.css&pure/0.2.0/buttons-min.css&pure/0.2.0/menus-min.css&pure/0.2.0/forms-min.css">
+		<link rel="stylesheet" type="text/css" href="css/pure-foo.css" />
+		<link rel="stylesheet" type="text/css" href="css/custom.css" />
+	</head>
+
+	<body>
+
+		<div class="grid-pad">
+
+			<div class="col-3-12">
+				<div class="pure-menu pure-menu-open sidebar">
+					<a class="pure-menu-heading"><strong>[Clinic Name]</strong></a>
+					<ul>
+						<li><a href="home" class="menu">Home</a></li>
+						<li><a href="services" class="menu">Services</a></li>
+						<li><a href="team" class="menu">Team</a></li>
+						<li><a href="contact" class="menu">Contact</a></li>
+					</ul>
+				</div>
+			</div>
+
+			<div class="col-9-12 content">
+				<div id="home" class="active">
+					<h5>Home</h5>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+					<h6>Address</h6>
+					<address>The quick brown fox jumps over the lazy dog</address>
+				</div>
+
+				<div id="services" class="inactive">
+					<h5>We care</h5>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+				</div>
+
+				<div id="team" class="inactive">
+					<h5>Meet the crew</h5>
+					<div class="grid-pad">
+						<div class="col-4-12">
+							<img src="http://placehold.it/200x200">
+						</div>
+						<div class="col-8-12">
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+						</div>
+					</div>
+					<div class="grid-pad">
+						<div class="col-8-12">
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+						</div>
+						<div class="col-4-12">
+							<img src="http://placehold.it/200x200">
+						</div>
+					</div>
+				</div>
+
+				<div id="contact" class="inactive">
+					<h5>Ask Us</h5>
+					<form id="contact-form" class="pure-form pure-form-aligned">
+				    <fieldset>
+				        <div class="pure-control-group">
+					        <label for="email">Email</label>
+					        <input id="email" name="email" type="email" placeholder="Email">
+				        </div>
+				        <div class="pure-control-group">
+					        <label for="message">Message</label>
+					        <textarea name="message" id="message" form="contact-form" rows="4" cols="50" placeholder="Type message here"></textarea> 
+				        </div>
+				        <div class="pure-controls">
+				        	<button type="submit" class="pure-button pure-button-success">Send</button>
+				        </div>
+				    </fieldset>
+				</form>
+				</div>
+			</div>
+
+		</div>
+
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+		<script src="js/_.js"></script>
+
+	</body>
+
+</html>
