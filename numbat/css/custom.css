@@ -1,0 +1,96 @@
+@import url(http://fonts.googleapis.com/css?family=Oxygen);
+
+html,
+body {
+  font-family: "Oxygen","Helvetica Neue",Helvetica,Arial,sans-serif;
+  height: 100%;
+  /* The html and body elements cannot have any padding or margin. */
+}
+
+/*my mess starts here*/
+
+.small {
+  font-size: 85%;
+}
+
+.center {
+  text-align: center;
+}
+
+small.right {
+  width: auto;
+  text-align: right;
+}
+
+a.active {
+  background-color: #fff;
+}
+
+a.white {
+  color: #fff;
+}
+
+a.white:hover, a.white:focus {
+  color: #020202;
+}
+
+.navbar .nav > li > a {
+  color: #fff;
+}
+
+.navbar-fixed-top {
+  background: rgba(2, 2, 2, 0.5);
+  padding-left: 21%;
+  padding-right: 21%;
+  -webkit-background-clip: padding-box; /* for Safari */
+  background-clip: padding-box; /* for IE9+, Firefox 4+, Opera, Chrome */
+}
+
+.tab-content {
+  padding-top: 60px;
+}
+
+/*my mess ends here*/
+
+/* Wrapper for page content to push down footer */
+#wrap {
+  min-height: 100%;
+  height: auto !important;
+  height: 100%;
+  /* Negative indent footer by it's height */
+  margin: 0 auto -60px;
+}
+
+/* Set the fixed height of the footer here */
+#push, #footer {
+  height: 60px;
+}
+
+/* Custom page CSS
+-------------------------------------------------- */
+/* Not required for template or sticky footer method. */
+
+.container {
+  width: auto;
+  max-width: 58%;
+}
+.container .credit {
+  margin: 20px 0;
+}
+
+/* Lastly, apply responsive CSS fixes as necessary */
+@media (max-width: 767px) {
+  #footer {
+    margin-left: -20px;
+    margin-right: -20px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .container {
+    width: auto;
+    max-width: 90%;
+  }
+  .tab-content {
+    padding-top: 120px;
+  }
+}

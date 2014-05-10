@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script src="http://localhost:35729/livereload.js"></script>
+	<title>drabiter</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<noscript><link rel="stylesheet" href="css/noJS.css"/></noscript>
+</head>
+<body>
+
+	<div id="wrap">
+		<div class="navbar navbar-fixed-top">
+		<a id="head" class="brand" href="/">drabiter</a>
+		<ul class="nav nav-pills pull-right">
+				<li>
+					<a href="http://twitter.com/drabiter" target="blank" class="white" title="twitter" data-placement="bottom"><i class="icon-twitter"></i></a>
+				</li>
+				<li>
+					<a href="https://plus.google.com/108235488765263052955" target="blank" class="white" title="g+" data-placement="bottom"><i class="icon-google-plus"></i></a>
+				</li>
+				<li>
+					<a href="http://drabiter.com/blog" target="blank" class="white" title="blog" data-placement="bottom"><i class="icon-rss"></i></a>
+				</li>
+				<li class="dropdown">
+					<a class="dropdown-toggle" data-toggle="dropdown" href="#"><i class="icon-th"></i><b class="caret"></b></a>
+					<ul class="dropdown-menu">
+						<li>
+							<a href="#about" data-toggle="tab" title="> bash $ who" data-placement="left"><i class="icon-user"></i><small class="right"> &nbsp;About</small></a>
+						</li>
+						<li>
+							<a href="#work" data-toggle="tab" title="Portfolio" data-placement="left"><i class="icon-tasks"></i><small class="right"> &nbsp;Work</small></a>
+						</li>
+						<li>
+							<a href="#geek" data-toggle="tab" title="or nerd?" data-placement="left"><i class="icon-headphones"></i><small class="right"> &nbsp;Geek</small></a>
+						</li>
+						<li>
+							<a href="#contact" data-toggle="tab" title="How to find me" data-placement="left"><i class="icon-envelope-alt"></i><small class="right"> &nbsp;Contact</small></a>
+						</li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+		<!-- Begin page content -->
+		<div class="container">
+			<div class="tab-content">
+				<div id="about" class="row-fluid tab-pane active in">
+					<div class="page-header">
+						<h2>About</h2>
+					</div>
+					<div class="row-fluid">
+						<div class="span4">
+							<div class="row-fluid">
+								<img class="img-rounded" src="img/AVA_200.png" title="I made this avatar by myself with this limited art skill. No regret.">
+							</div>
+							<div class="row-fluid"><hr></div>
+							<div class="row-fluid">
+								<p class="lead"><strong>Hendra G.</strong></p>
+							</div>
+							<div class="row-fluid">
+								<small>I'm self-motivated - I make apps and games in my free time. Otherwise, I go hunt some unicorns. Founder of <a href="http://coffeefury.com/" target="blank" title="A team of indie game dev-group with a cup of dark jokes and caffeine shot">coffeeFURY</a></small>
+							</div>
+						</div>
+						<div class="span7 offset1"> 
+							<p class="lead"><strong>What I am</strong></p>
+							<p class="small">Like a work-in-progress code, I always change every second. I prefer Keep over Evernote. I don't have Facebook account. Tab and Space are my favorite keys. Currently I am a very random freelancer.</p>
+							<div class="row-fluid">
+								<div class="span7">
+									<p class="lead"><strong>drabiter.com</strong></p>
+									<p class="small">A <abbr title="except the blog part">static</abbr> landing page or personal site of mine. It acts like digital name card, but has more detailed (and rich) info so I don't need to put them all in a <abbr title="US standard">89x51</abbr> mm sized paper. I can put my portfolio and contact seamlessly here. </p>
+								</div>
+								<div class="span4 offset1">
+									<p class="lead"><strong>Gig</strong></p>
+									<p><small><a href="http://java4k.com/" target="blank" title="It's my first time in judging panel. Was fun.">Java4K 2012 judge</a><br><a href="http://java4k.com/" target="blank" title="I applied again as judge. This year we have lot of entries!">Java4K 2013 judge</a></small></p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div id="work" class="row-fluid tab-pane">
+					<div class="page-header">
+						<h2>Work</h2>
+					</div>
+					<div class="row-fluid">
+						<ul id="da-thumbs" class="da-thumbs inline">
+							<li class="span2">
+								<a href="#swipebox" data-toggle="modal">
+									<img src="img/swipebox.png">
+									<div><span>Java. Android. Free</span></div>
+								</a>
+							</li>
+							<li class="span2 offset1">
+								<a href="#magnet" data-toggle="modal">
+									<img src="img/magnet.png">
+									<div><span>Java. Android. Desktop.</span></div>
+								</a>
+							</li>
+						</ul>
+					</div>
+					<div class="row-fluid"><p></p></div>
+					<div class="row-fluid">
+						<div class="span2">
+							<small>
+								<strong class="pull-left"><strong>Swipebox</strong></strong>
+								<em class="pull-right">game</em>
+							</small>
+						</div>
+						<div class="span2 offset1">
+							<small>
+								<strong class="pull-left"><strong>MAGNET</strong></strong>
+								<em class="pull-right">game</em>
+							</small>
+						</div>
+						<!-- <div class="span2 offset1">
+						</div> -->
+					</div>
+					<div id="swipebox" class="modal hide fade">
+						<div class="modal-header">
+							<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button><h3>Swipebox</h3>
+						</div>
+						<div class="modal-body">
+							<center><img class="img-rounded" src="img/swipebox.png"></center><br>
+							<p>Actually I used this game to test swipe functionality. You know, that shining slashing line effect on Fruit Ninja. It surprises me the effect costs lot of vectors computing resource. Fortunately, all modern phones can handle that.</p>
+							<p><span class="label label-warning"><small>URL </small></span> <a href="//swipebox.coffeefury.com" target="blank">swipebox.coffeefury.com</a></p>
+							<p><span class="label label-inverse"><small>price </small></span> Free. No ads. No freemium.</p>
+						</div>
+						<div class="modal-footer">
+							<a href="https://play.google.com/store/apps/details?id=com.drabiter.swipebox" class="btn btn-success" target="blank">Android</a>
+						</div>
+					</div>
+					<div id="magnet" class="modal hide fade" role="dialog">
+						<div class="modal-header">
+							<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button><h3>MAGNET</h3>
+						</div>
+						<div class="modal-body">
+							<center><img class="img-rounded" src="img/magnet.png"></center><br>
+							<p>MAGNET is my first ever Android game that got published. It's puzzle game where you have to meet a passive pole with its counterpart with limited units. What will make you scratch your head more is the fact that each unit can only do one time push/pull/clone per level. So hard!</p>
+							<p><span class="label label-warning"><small>URL </small></span> <a href="//magnet.coffeefury.com" target="blank">magnet.coffeefury.com</a></p>
+							<p><span class="label label-inverse"><small>Price </small></span> Free. No ads. No freemium.</p>
+						</div>
+							<div class="modal-footer">
+								<a href="https://play.google.com/store/apps/details?id=com.coffeefury.magnet" class="btn btn-success" target="blank">Android</a>
+								<a href="http://www.indiedb.com/games/magnet" class="btn btn-primary" target="blank">Desktop (Win/OSX/Linux)</a>
+							</div>
+					</div>
+				</div>
+
+				<div id="geek" class="row-fluid tab-pane">
+					<div class="page-header">
+						<h2>Project</h2>
+					</div>
+					<h4>Coderwall achievements</h4>
+					<div class="row-fluid" id="proudify-coderwall"></div>
+					<h4>Completed Codeschool courses</h4>
+					<div class="row-fluid" id="proudify-codeschool"></div>
+				</div>
+
+				<div id="contact" class="row-fluid tab-pane">
+					<div class="page-header">
+						<h2>Contact</h2>
+					</div>
+					<p>Want to <abbr title="Web development, Android games, repetitive math works, anything">work</abbr> with me? Or have questions?</p>
+					<address>
+						<small>
+							<ul class="inline">
+								<li>
+									<a href="mailto:drabiter@gmail.com" target="blank" class="white" title="email" data-placement="bottom"><i class="icon-envelope icon-3x"></i></a>
+								</li>
+								<li>
+									<a href="https://github.com/drabiter" target="blank" class="white" title="github" data-placement="bottom"><i class="icon-github icon-3x"></i></a>
+								</li>
+								<li>
+									<a href="http://coderwall.com/drabiter" target="blank" class="white" title="coderwall" data-placement="bottom"><i class="icon-code icon-3x"></i></a>
+								</li>
+								<li>
+									<a href="http://id.linkedin.com/in/drabiter/" target="blank" class="white" title="linkedin" data-placement="bottom"><i class="icon-linkedin icon-3x"></i></a>
+								</li>
+							</ul>
+						</small>
+					</address>
+				</div>
+			</div>
+		</div><!-- End page content -->
+
+		<div id="push"></div>
+
+	</div><!-- End of wrap -->
+
+	<div id="footer">
+		<div class="container">
+			<p class="muted credit center">
+				<small>
+					&copy 2013 <a class="muted" href="http://drabiter.com/">Hendra</a>. <a class="muted" target="blank" href="http://twitter.github.io/bootstrap/">Bootstrap</a>. <a class="muted" target="blank" href="http://tympanus.net/codrops/2012/04/09/direction-aware-hover-effect-with-css3-and-jquery/">Hover Effect</a>. <a href="https://github.com/icebreaker/proudify" target="blank" class="muted">Proudify</a>. <a href="http://fortawesome.github.io/Font-Awesome/" target="blank" class="muted">Font Awesome</a>.
+				<small>
+			</p>
+		</div>
+	</div>
+
+	<script src="js/enhance.js"></script>
+	<script>
+		enhance({
+			appendToggleLink: false,
+			loadStyles: [
+				'css/bootstrap.min.css',
+				'css/demo.css',
+				'css/style.css',
+				'css/proudify.min.css',
+				'css/font-awesome.min.css',
+				'css/custom.css',
+				'css/bootstrap-responsive.min.css',
+			], 
+			loadScripts: [
+				'js/jquery-1.9.1.min.js',
+				'js/bootstrap.min.js',
+				'js/modernizr.custom.97074.js',
+				'js/jquery.hoverdir.js',
+				'js/jquery-proudify.min.js'
+			],
+			onScriptsLoaded: function(){
+      	// tooltip init
+	      $('[title]').tooltip();
+	      
+	      // hover effect for 'work' section
+	      $(' #da-thumbs > li ').each( function(){ 
+	      	$(this).hoverdir(); 
+	      });
+
+	      // lazy load proudify
+	      var load = false;
+	      $('a[href="#geek"]').click(function(){
+	      	if (!load) {
+	      		$('#proudify-coderwall').proudify({'username':'drabiter', 'service':'coderwall'});
+	      		$('#proudify-codeschool').proudify({'username':'drabiter', 'service':'codeschool'});
+	      		load = true;
+	      	}
+	      });
+
+	      // redirect page based on anchor
+	      var anchor = window.location.hash.replace('#', '');
+	      if (anchor != ''){
+	      	$('a[href="#' + anchor + '"]').click();
+	      }
+
+	      // google-analytics code
+	      var _gaq = _gaq || [];
+	      _gaq.push(['_setAccount', 'UA-34867032-1']);
+	      _gaq.push(['_setDomainName', 'drabiter.com']);
+	      _gaq.push(['_trackPageview']);
+	      (function() {
+	      	var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+	      	ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+	      	var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+	      })();
+	    }
+  });
+</script>
+
+</body>
+</html>
