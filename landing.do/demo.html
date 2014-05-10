@@ -1,0 +1,133 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title>Demo Page</title>
+	<meta name='description' content=''/>
+	<meta name='keywords' content=''/>	
+	
+	<script type="text/javascript">
+		var c = new Date();
+		var thehour = c.getHours();
+
+		if ((thehour >= 18) || (thehour <= 6))
+			document.write("<link rel='stylesheet' href='res/css/darkstyle.css' type='text/css' media='screen, projection' />");
+		else
+			document.write("<link rel='stylesheet' href='res/css/lightstyle.css' type='text/css' media='screen, projection' />");
+	</script>
+	
+	<noscript>
+		<center><b><br>Enable Javascript to look all information on this page.<br></b></center>
+		<link rel="stylesheet" href="res/css/darkstyle.css" type="text/css" media="screen, projection" />
+	</noscript>
+	
+	<link rel="stylesheet" href="res/css/font-awesome.css" type="text/css">
+	<link rel="stylesheet" type="text/css" href="res/fancybox/jquery.fancybox-1.3.1.css" media="screen" />
+
+	</head>
+
+	<body>
+		<div class="wrapper">
+			<div class="box">
+		    	<div class="content">
+		        	<div class="left">
+		        		<h2>Header 1</h2><br>
+							Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+							<br><br>
+							<blockquote>"arrgh!"</blockquote><br><br>
+
+					</div>
+		            <div class="right">
+
+
+		          		<h2>Header 2</h2><br>
+
+		          		<a id="pic" href="http://placehold.it/500x500"><img alt="drabiter" border="1" src="http://placehold.it/50x159" /></a>
+		          		<a id="pic1" href="http://placehold.it/500x300"><img alt="coffee fury" border="1" src="http://placehold.it/50x159" /></a><br><br>
+						
+						<!-- site contents -->
+						
+						<ul class="nav nav-list">
+							<li><a id="inline" href="#achievement"><i class="icon-trophy"></i> achievements </a></li>
+							<li><a id="inline" href="#certificate"><i class="icon-certificate"></i> certifications </a></li>
+							<li><a id="inline" href="#publication"><i class="icon-book"></i> publications </a></li>
+							<li><a id="inline" href="#interest"><i class="icon-heart"></i> interests </a></li>
+						</ul>
+						<br><br>
+						
+						<!-- social icons -->
+						
+						<a id="inline" href="#mail" class="small_icon"><i class="icon-envelope icon-large"></i></a>
+						<a href="" target="_blank" class="small_icon"><i class="icon-twitter icon-large"></i></a>
+						<a href="" target="_blank" class="small_icon"><i class="icon-github icon-large"></i></a>
+		        		<a href="" target="_blank" class="small_icon"><i class="icon-google-plus icon-large"></i></a>
+						
+		          		<br><br><br>
+						<div class="footer">
+						Powered by: 
+						<a href="http://fortawesome.github.com/Font-Awesome/" target="_blank">Font Awesome</a>.
+						<a href="http://tentblogger.com/free-branding-templates/" target="_blank">Page Template</a>.
+		          		</div>
+				<!-- Like this template? Thank me by keeping a link back to this URL! Word up yo. --> 
+					</div>
+		        </div>
+		    </div>
+		</div>
+
+		<div style="display:none">
+			<div id="achievement" class="popup">
+				<ul class="icons">
+					<li class="spacing"><i class="icon-star"></i> achievement 1 </li>
+					<li class="spacing"><i class="icon-star"></i> achievement 2 </li>
+					<li class="spacing"><i class="icon-star-empty"></i> achievement 3 </li>
+				</ul>
+			</div>
+			<div id="certificate" class="popup">
+				<ul class="icons">
+					<li class="spacing"><i class="icon-ok"></i> certificate 1 </li>
+					<li class="spacing"><i class="icon-ok"></i> certificate 2 </li>
+				</ul>
+			</div> 
+			<div id="publication" class="popup">
+				<ul class="icons">
+					<li class="spacing"><i class="icon-pencil"></i> thesis 1 </li>
+					<li class="spacing"><i class="icon-pencil"></i> thesis 2 </li>
+					<li class="spacing"><i class="icon-pencil"></i> thesis 3 </li>
+				</ul>
+			</div>
+			<div id="interest" class="popup">
+				<ul class="icons">
+					<li class="spacing"><i class="icon-heart-empty"></i> fishing, for example? </li>
+				</ul>
+			</div>
+			<div id="mail">
+				your@email
+			</div>
+		</div>
+
+		<script type="text/javascript" src="res/fancybox/jquery-1.4.2.min.js"></script>
+		<script type="text/javascript" src="res/fancybox/jquery.mousewheel-3.0.2.pack.js"></script>
+		<script type="text/javascript" src="res/fancybox/jquery.fancybox-1.3.1.js"></script>
+		
+		<script type="text/javascript">
+			$(document).ready(function() {
+
+			$("a#inline").fancybox({
+				'hideOnContentClick': false,
+				'padding'			: 5,
+				'transitionOut'		: 'fade'
+			});
+			
+			$("a#pic").fancybox({
+				'titleShow'		: false
+			});
+			
+			$("a#pic1").fancybox({
+				'titleShow'		: false
+			});
+
+		});
+		</script>
+
+	</body>
+</html>
