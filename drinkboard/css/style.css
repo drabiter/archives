@@ -1,0 +1,165 @@
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:300);
+/*f3dbb7
+ef7f65
+0f6679*/
+
+html {
+	font-size: 18px;
+}
+
+body.custom {
+	/*opacity: 0;*/
+	max-width: 80%;
+	margin-left: auto;
+	margin-right: auto;
+	height: 100%;
+	font-family: 'Open Sans', 'Lucida Grande', sans-serif;
+	/*background-color: rgb(131, 178, 222);*/
+	/*color: #fff;*/
+	/*color: rgb(131, 178, 222);*/
+	color: #00c6fc;
+	/*background-image: url('../img/polaroid.png');*/
+}
+
+@keyframes fade-in {
+	0% { opacity: 0; }
+	100% { opacity: 1; }
+}
+
+.btn-blue {
+	/*background-color: rgb(131, 178, 222);
+	border-color: rgb(131, 178, 222);*/
+	background-color: #00c6fc;
+	border-color: #00c6fc;
+}
+
+.btn-blue:hover {
+	/*background-color: #cbeaef;
+	border-color: */#cbeaef;*/
+	background-color: #2f648f;
+	border-color: #2f648f;
+}
+
+section.container {
+	margin-top: 1.2em;
+	margin-bottom: 1.2em;
+	height: 100%;
+}
+
+div.unloaded {
+	opacity: 0;
+}
+
+div.loaded {
+	opacity: 1;
+  transition:         opacity 1s linear;
+  -webkit-transition: opacity 1s linear;
+  -moz-transition:    opacity 1s linear;
+  -ms-transition:     opacity 1s linear;
+  -o-transition:      opacity 1s linear;
+  transition:         opacity 1s linear;
+}
+
+span.header {
+	color: #00c6fc;
+}
+
+a.navbar {
+	/*color: #fff;*/
+	/*color: rgb(131, 178, 222 );*/
+	color: #00c6fc;
+	padding-top: 1.25em;
+	margin-left: 1.25em;
+}
+
+.main {
+	-webkit-border-radius: 30px;
+	-moz-border-radius: 30px;
+	border-radius: 30px;
+	/*background-color: rgba(131, 178, 222, 0.75);*/
+	background-color: #fff;
+	padding: 2.5%;
+}
+
+.no-login {
+	padding: 20%;
+}
+
+.list-drink {
+	padding-top: 2%;
+	/*padding-left: 8%;*/
+}
+
+.graph {
+	margin-left: auto;
+	margin-right: auto;
+}
+
+div.bottom-line {
+	border-top: 1px solid #eee;
+	padding-top: 1.5em;
+	padding-bottom: 1.5em;
+}
+
+.note-pie, .note-radar {
+	/*padding-left: 5.75%;*/
+	font-size: 130%;
+}
+
+.note-line {
+	/*padding-left: 0.75%;*/
+	font-size: 120%;
+}
+
+.muted {
+	color: #000;
+}
+
+.shadow {
+	/*border: 1px solid #ccc;
+	-webkit-border-radius: 50px;
+	-moz-border-radius: 50px;
+	border-radius: 50px;*/
+	-webkit-box-shadow: 1px 1px 11px #888888;
+	-moz-box-shadow: 1px 1px 11px #888888;
+	box-shadow: 1px 1px 11px #888888;
+}
+
+.heavy {
+	font-weight: 600;
+}
+
+.hide {
+	visibility: hidden;
+}
+
+
+input#vol {
+	width: auto;
+}
+
+select{
+	width: auto;
+}
+
+button.input-inline {
+	padding-top: 7px;
+	padding-bottom: 7px;
+	margin-bottom: 1.176470588em;
+}
+
+canvas{
+    width: 100% !important;
+    max-width: 800px;
+    height: auto !important;
+}
+
+@media(max-width: 40em){
+	body {
+		max-width: 95%;
+	}
+
+	canvas {
+		max-width: 400px;
+	}
+}

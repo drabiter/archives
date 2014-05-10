@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+
+	    <!-- Force latest available IE rendering engine and Chrome Frame (if installed) -->
+	    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        
+        <title>DrinkBoard</title>
+        <meta name="description" content="Keep track on your drinks">
+
+        
+        <!-- Mobile Screen Resizing -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        
+        <!-- stylesheet -->
+        <link rel="stylesheet" href="css/kraken.css" type="text/css">
+        <link rel="stylesheet" href="css/style.css" type="text/css">
+
+        <!-- HTML5 Shim for IE 6-8 -->
+        <!--[if lt IE 9]>
+        <link rel="stylesheet" href="css/elementTransitions.css" type="text/css">
+            <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+
+   
+	    <!-- Favicon -->
+        <link rel="shortcut icon" type="image/ico" href="img/favicon-32.png">
+
+        <!-- Apple Touch Icons -->
+        <link rel="apple-touch-icon" href="img/favicon-32.png">
+        <link rel="apple-touch-icon" sizes="72x72" href="img/favicon-72.png">
+        <link rel="apple-touch-icon" sizes="114x114" href="img/favicon-114.png">
+        <link rel="apple-touch-icon" sizes="144x144" href="img/favicon-144.png">
+
+        <!-- MS Homescreen Icons -->
+        <meta name="msapplication-TileColor" content="#0088cc">
+        <meta name="msapplication-TileImage" content="img/favicon-144.png">
+
+        <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+        <!-- (Via HTML5 Boilerplate: http://html5boilerplate.com/) -->
+        <script>
+            // var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
+            // (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+            // g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+            // s.parentNode.insertBefore(g,s)}(document,'script'));
+        </script>
+
+    </head>
+
+    <body class="custom">
+
+        <!-- Old Browser Warning -->
+        <!-- If you're supporting IE 6-7, remove this -->
+        <!--[if lt IE 8]>
+            <section class="container">
+                Did you know that your web browser is a bit old? Some of the content on this site might not work right as a result. <a href="http://whatbrowser.org">Upgrade your browser</a> for a faster, better, and safer web experience.
+            </section>
+        <![endif]-->
+
+
+        <section class="container">
+
+            <div class="group space-bottom-small">
+                <a href="/drinkboard"><span class="h1 header float-left">DrinkBoard</span></a><span class="text-small">alpha</span>
+            </div>
+
+            <div class="main unloaded">
+                <div class="content">
+                </div>
+            </div>
+
+            <div class="footer group space-top-small">
+                <span class="muted float-right text-small text-center">
+                    Crafted with <a href="http://www.chartjs.org/" target="blank">Chart.js</a>
+                </span>
+            </div>
+
+        </section>
+
+        <script type="text/template" id="error">
+            <p>Oops, something wrong</p>
+        </script>
+
+        <script type="text/template" id="dashboard">
+            <div id="input" class="row text-center space-bottom">
+                <input name="volume" id="vol" class="input-inline vol" type="number" placeholder="Volume" autofocus="autofocus">
+                <select id="type" class="input-inline vol">
+                    <option value="water">Water</option>
+                    <option value="coffee">Coffee</option>
+                    <option value="beer">Beer</option>
+                </select>
+                <select id="volUnit" class="input-inline vol">
+                    <option value="mL">mL</option>
+                    <option value="L">L</option>
+                </select>
+                <button href="#" class="submit btn btn-blue input-inline">Glup!</button>
+                <br>
+                <button href="#" class="bootstrap btn">Or generate (5 data)</button>
+            </div>
+            <div class="row space-bottom-small bottom-line">
+                <div class="grid-2">
+                    <canvas id="overall-chart" width="400" height="400" class="graph"></canvas>
+                </div>
+                <div class="grid-1">
+                    <ul class="list-unstyled">
+                    {{#pie}}
+                        <li class="text-right heavy" style="color:{{color}}">
+                            {{name}} {{value}}x takes
+                        </li>
+                    {{/pie}}
+                    </ul>
+                </div>
+                <div class="grid-2 offset-1 note-pie">
+                    Looks like you are 
+                        {{#notePie.water}} 
+                            an aquitian. Drinking lot of water is healthy! 
+                            Your nerves will love it, Keep up!
+                        {{/notePie.water}}
+                        {{#notePie.coffee}} 
+                            a coffee-lover. Full works in table? Coffee is good companion, 
+                            but remember the caffeine addiction backfire.
+                        {{/notePie.coffee}}
+                        {{#notePie.beer}} 
+                            a drunken-master ;) While beer can reduce risk of cardiovascular disease, 
+                            watch out the alcohol level.
+                        {{/notePie.beer}}
+                        {{#notePie.other}}
+                            You Don't Have Any Records yet. <a href="#input">Let's Add One</a>!
+                        {{/notePie.other}}
+                </div>
+            </div>
+            <div class="row space-bottom-small bottom-line">
+                <div class="grid-4 note-radar">
+                    At night you love to drink {{{noteRadar.night}}} 
+                    while in day you prefer {{{noteRadar.day}}}.
+                </div>
+                <div class="grid-2">
+                    <canvas id="time-chart" width="400" height="400" class="graph"></canvas>
+                </div>
+            </div>
+            <div class="row space-bottom-small bottom-line">
+                <div class="grid-3">
+                    <canvas id="series-chart" width="500" height="250" class="graph"></canvas>
+                </div>
+                <div class="grid-3 note-line">
+                    Total takes:<br><br>
+                    {{{noteLine.totals}}}<br>
+                    {{#noteLine.note.same}}
+                        This proves <a href="#overall-chart">above statement</a>. 
+                        Not only you drink {{noteLine.note.max}} often but also lot of it!
+                    {{/noteLine.note.same}}
+                    {{^noteLine.note.same}}
+                        While you often drink {{noteLine.note.max}}, 
+                        you have drunk {{noteLine.note.big}} more in term of total.
+                    {{/noteLine.note.same}}
+                    {{#noteLine.note.other}}
+                        Sorry, no data yet. <a href="#input">How about add one now</a>?
+                    {{/noteLine.note.other}}
+                </div>
+            </div>
+        </script>
+
+        <script type="text/template" id="auth">
+            <center>
+                <p>Keep Your Drinking Records. Stay Hydrated.</p>
+                <a href="/auth/twitter" id="twitter-auth" class="btn btn-blue btn-large">Login with Twitter</a>
+            </center>
+        </script>
+
+        <!-- Javascript -->
+        <!-- In the footer for better performance -->
+        <script src="js/kraken.js"></script>
+        <script src="js/underscore-min.js"></script>
+        <script src="js/mustache.js"></script>
+        <script src="js/jquery-1.10.1.min.js"></script>
+        <script src="js/backbone-min.js"></script>
+        <script src="js/backbone.localStorage-min.js"></script>
+        
+        <script src="js/moment.min.js"></script>
+        <script src="js/Chart.js"></script>
+        <script src="js/rcolor.js"></script>
+        <script src="js/app.js"></script>
+        <script src="js/resize_chart_canvas.js"></script>
+        <script type="text/javascript">
+            $(window).on('load', function() {
+                $('div.main').removeClass('unloaded');
+                $('div.main').addClass('loaded');
+            });
+        </script>
+
+        <!--
+        <script src="js/elementTransitions.js"></script>
+        <script src="js/backbone.routefilter.min.js"></script>
+        -->
+
+    </body>
+</html>
